@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CMP Smart Queue | Admin Dashboard</title>
+
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+
+    <div class="admin-wrap">
+
+        <!-- BLACK NAVBAR WITH COLLEGE LOGO -->
+        <header class="admin-top">
+
+            <div class="admin-brand">
+
+                <img
+                    src="../assets/cmp-logo.png"
+                    alt="CMP Degree College Logo"
+                    class="admin-logo"
+                >
+
+                <div class="admin-brand-text">
+                    <h2>CMP Degree College</h2>
+                    <p>SMART QUEUE MANAGEMENT</p>
+                </div>
+
+            </div>
+
+            <div class="admin-user">
+
+                <h3>Admin Dashboard</h3>
+
+                <p id="adminName">Administrator</p>
+                <a href="../index.html" class="home-btn">Home</a>
+
+                <button type="button" id="logoutBtn">
+                    Logout
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- MAIN DASHBOARD -->
+        <main class="admin-content">
+
+            <!-- DASHBOARD HEADING -->
+            <section class="welcome-section">
+
+                <p class="section-label">ADMINISTRATION PORTAL</p>
+
+                <h1>Welcome to Admin Dashboard</h1>
+
+                <p>
+                    Manage student appointments, tokens and college
+                    verification services from one place.
+                </p>
+
+            </section>
+
+
+            <!-- STATISTICS -->
+            <section class="stats-grid">
+
+                <div class="stat-card">
+                    <span class="stat-icon">🎓</span>
+                    <h3>Total Students</h3>
+                    <p id="totalStudents">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-icon">🎫</span>
+                    <h3>Total Tokens</h3>
+                    <p id="totalTokens">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-icon">⏳</span>
+                    <h3>Waiting Tokens</h3>
+                    <p id="waitingTokens">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-icon">✅</span>
+                    <h3>Completed Tokens</h3>
+                    <p id="completedTokens">0</p>
+                </div>
+
+            </section>
+
+              <!-- VERIFICATION SCHEDULE -->
+<section class="dashboard-card">
+
+    <div class="section-heading">
+        <div>
+            <p class="section-label">SCHEDULE CONTROL</p>
+            <h2>Create Verification Schedule</h2>
+        </div>
+    </div>
+
+    <p class="section-description">
+        Set verification dates, classes and student booking limits.
+    </p>
+
+    <form id="scheduleForm">
+
+        <div class="filter-row">
+
+            <div class="filter-group">
+                <label for="scheduleDate">Verification Date</label>
+                <input type="date" id="scheduleDate" required>
+            </div>
+
+            <div class="filter-group">
+                <label for="scheduleClass">Select Class</label>
+                <input
+                    type="text"
+                    id="scheduleClass"
+                    list="classOptions"
+                    placeholder="Enter or select class"
+                    required
+                >
+
+                <datalist id="classOptions">
+                    <option value="B.A.">
+                    <option value="B.Sc.">
+                    <option value="B.Com.">
+                    <option value="BCA">
+                    <option value="M.A.">
+                    <option value="M.Sc.">
+                    <option value="M.Com.">
+                </datalist>
+            </div>
+
+            <div class="filter-group">
+                <label for="scheduleService">Select Service</label>
+                <select id="scheduleService" required>
+                    <option value="">Select Service</option>
+                    <option value="Scholarship Document Verification">
+                        Scholarship Document Verification
+                    </option>
+                    <option value="Admission Document Verification">
+                        Admission Document Verification
+                    </option>
+                    <option value="General Document Verification">
+                        General Document Verification
+                    </option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="dailyTarget">Daily Student Target</label>
+                <input
+                    type="number"
+                    id="dailyTarget"
+                    min="1"
+                    placeholder="Example: 500"
+                    required
+                >
+            </div>
+
+            <div class="filter-group">
+                <label for="slotCapacity">Students Per Time Slot</label>
+                <input
+                    type="number"
+                    id="slotCapacity"
+                    min="1"
+                    placeholder="Example: 10"
+                    required
+                >
+            </div>
+
+        </div>
+
+        <button type="submit" class="primary-btn">
+            Save Schedule
+        </button>
+
+    </form>
+
+</section>
+            <!-- TOKEN MANAGEMENT -->
+
+            <section class="dashboard-card">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="section-label">QUEUE CONTROL</p>
+                        <h2>Manage Student Tokens</h2>
+                    </div>
+                </div>
+
+                <p class="section-description">
+                    View student appointments and manage their queue status.
+                </p>
+
+                <!-- FILTERS -->
+                <div class="filter-row">
+
+                    <div class="filter-group">
+                        <label for="filterDate">Filter by Date</label>
+                        <input type="date" id="filterDate">
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filterService">Filter by Service</label>
+
+                        <select id="filterService">
+                            <option value="">All Services</option>
+                            <option value="Admission">Admission</option>
+                            <option value="Scholarship">Scholarship</option>
+                            <option value="Document Verification">
+                                Document Verification
+                            </option>
+                            <option value="Fee Verification">
+                                Fee Verification
+                            </option>
+                            <option value="Certificate">Certificate</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filterStatus">Filter by Status</label>
+
+                        <select id="filterStatus">
+                            <option value="">All Statuses</option>
+                            <option value="Waiting">Waiting</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Completed">Completed</option>
+                            <option value="Cancelled">Cancelled</option>
+                        </select>
+                    </div>
+
+                    <button type="button" id="resetFilters" class="secondary-btn">
+                        Reset Filters
+                    </button>
+
+                </div>
+
+                <!-- TOKEN TABLE -->
+                <div class="table-wrapper">
+
+                    <table class="token-table">
+
+                        <thead>
+                            <tr>
+                                <th>Token No.</th>
+                                <th>Student Name</th>
+                                <th>Service</th>
+                                <th>Appointment Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tokenTableBody">
+
+                            <tr>
+                                <td colspan="6" class="empty-message">
+                                    Loading student tokens...
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+            <footer class="admin-footer">
+
+                <img
+                    src="../assets/cmp-logo.png"
+                    alt="CMP College Logo"
+                    class="footer-logo"
+                >
+
+                <div>
+                    <h3>C.M.P. Degree College, Prayagraj</h3>
+
+                    <p>
+                        Smart Digital Queue and Verification Management System
+                    </p>
+
+                    <small>
+                        &copy; 2026 CMP Smart Queue Management System
+                    </small>
+                </div>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- Keep the existing admin JavaScript -->
+    <script type="module" src="../js/admin.js"></script>
+
+</body>
+
+</html>

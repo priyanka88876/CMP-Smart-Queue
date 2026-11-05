@@ -1,0 +1,227 @@
+/* =================================
+   CMP SMART QUEUE - LOGIN PAGE
+   Skin + Red Theme
+================================= */
+
+.login-page {
+    min-height: calc(100vh - 150px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 20px;
+    background: #fff1dc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Login Card */
+.login-card {
+    width: 100%;
+    max-width: 490px;
+    padding: 40px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 20px;
+    background: #fff1dc;
+    border: 1px solid #e6c9a8;
+    box-shadow: 0 15px 40px rgba(90, 35, 20, 0.12);
+}
+
+/* Remove center logo */
+.login-card .login-icon {
+    display: none;
+}
+
+/* Heading */
+.login-card .section-label {
+    color: #963c25;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.login-card h1 {
+    color: #351b14;
+    font-size: 29px;
+    font-weight: 800;
+    margin: 0 0 12px;
+}
+
+.login-card .subtitle {
+    color: #705748;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+/* Form */
+.login-card .form-group {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.login-card .form-group label {
+    display: block;
+    color: #71351f;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.login-card .form-group input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    border-radius: 9px;
+    border: 1px solid #dfc5a6;
+    outline: none;
+    background: #ffffff;
+    color: #29221c;
+    font-size: 14px;
+}
+
+.login-card .form-group input::placeholder {
+    color: #a39788;
+}
+
+.login-card .form-group input:focus {
+    border-color: #a6472b;
+    box-shadow: 0 0 0 3px rgba(166, 71, 43, 0.12);
+}
+
+/* Password */
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    padding-right: 65px !important;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: #963c25;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Remember and Forgot Password */
+.login-card .form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0 22px;
+    font-size: 13px;
+}
+
+.login-card .remember-option {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #625448;
+}
+
+.login-card .form-options a {
+    color: #963c25;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Login Button */
+.login-card .login-submit {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 9px;
+    background: #963c25;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-card .login-submit:hover {
+    background: #742c1b;
+    transform: translateY(-2px);
+}
+
+.login-card .login-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Messages */
+.login-card .form-message {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #963c25;
+}
+
+/* Divider */
+.login-card .divider {
+    margin: 28px 0 20px;
+    color: #998777;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Links */
+.login-card .create-account,
+.login-card .back-home {
+    display: block;
+    margin-top: 15px;
+    color: #963c25;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.login-card .create-account:hover,
+.login-card .back-home:hover {
+    color: #742c1b;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    color: #705748;
+    font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+    .login-page {
+        min-height: auto;
+        padding: 30px 14px;
+    }
+
+    .login-card {
+        padding: 28px 20px;
+    }
+
+    .login-card h1 {
+        font-size: 24px;
+    }
+
+    .login-card .form-options {
+        font-size: 12px;
+    }
+}
+
+
+
+

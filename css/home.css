@@ -1,0 +1,1048 @@
+/* =========================================
+   CMP SMART QUEUE - HOME PAGE
+========================================= */
+
+/* NAVBAR */
+
+.navbar {
+    width: 100%;
+    min-height: 85px;
+    padding: 12px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(5, 12, 27, 0.96);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(15px);
+}
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.navbar-logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    border-radius: 14px;
+    background: #fff4dc;
+    padding: 4px;
+}
+
+.logo-text h2 {
+    font-size: 21px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.logo-text p {
+    margin-top: 4px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #ffad52;
+}
+
+/* DESKTOP NAVIGATION */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.nav-link {
+    color: #e1e6ef;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffb45c;
+}
+
+/* TOP BUTTONS */
+
+.top-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-button,
+.login-button,
+.signup-button,
+.menu-btn {
+    min-height: 43px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+.theme-button {
+    width: 45px;
+    border: 1px solid #34435e;
+    background: #ffffff;
+    color: #e99a25;
+    font-size: 22px;
+}
+
+.login-button {
+    padding: 0 17px;
+    color: #ffb45c;
+    background: #101b35;
+    border: 1px solid #ffae54;
+}
+
+.signup-button {
+    padding: 0 18px;
+    color: #241506;
+    background: linear-gradient(135deg, #ffd17b, #ff963e);
+}
+
+.login-button:hover,
+.signup-button:hover {
+    transform: translateY(-2px);
+}
+
+/* THREE LINE MENU BUTTON */
+
+.menu-btn {
+    width: 48px;
+    height: 45px;
+    border: 1px solid #34435e;
+    background: #ffffff;
+    color: #101b35;
+    font-size: 28px;
+    line-height: 1;
+    font-weight: 400;
+}
+
+/* SIDE MENU OVERLAY */
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1090;
+
+    background: rgba(0,0,0,0.65);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.menu-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* SIDE MENU */
+
+.options-menu {
+    position: fixed;
+    top: 0;
+    right: -430px;
+
+    width: 100%;
+    max-width: 420px;
+    height: 100vh;
+    height: 100dvh;
+
+    overflow-y: auto;
+    z-index: 1100;
+
+    background: #17243d;
+    border-left: 2px solid #34435e;
+    box-shadow: -10px 0 40px rgba(0,0,0,0.35);
+
+    transition: right 0.35s ease;
+}
+
+.options-menu.open {
+    right: 0;
+}
+
+/* MENU HEADING */
+
+.menu-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px;
+    border-bottom: 1px solid #34435e;
+}
+
+.menu-heading h2 {
+    color: #ffad30;
+    font-size: 19px;
+    letter-spacing: 2px;
+}
+
+.menu-close {
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    font-size: 32px;
+}
+
+/* MENU ITEMS */
+
+.menu-items {
+    padding: 15px;
+}
+
+.menu-items > a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding: 17px 14px;
+    margin-bottom: 5px;
+
+    color: #f0f3f8;
+    font-size: 18px;
+    font-weight: 650;
+
+    border-radius: 10px;
+    transition: 0.25s;
+}
+
+.menu-items > a span {
+    font-size: 25px;
+}
+
+.menu-items > a:hover {
+    color: #ffb45c;
+    background: rgba(255,174,84,0.10);
+    padding-left: 21px;
+}
+
+.menu-divider {
+    border: none;
+    border-top: 1px solid #34435e;
+    margin: 14px 0;
+}
+
+/* MENU THEME OPTION */
+
+.menu-theme {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    padding: 17px 13px;
+    margin-bottom: 15px;
+
+    background: #111d33;
+    border: 1px solid #34435e;
+    border-radius: 13px;
+
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.menu-theme button {
+    border: 1px solid #34435e;
+    border-radius: 25px;
+    padding: 10px 15px;
+
+    color: #ffffff;
+    background: #17243d;
+    font-weight: 700;
+}
+
+/* HERO SECTION */
+
+.welcome-hero {
+    padding: 75px 6% 60px;
+    background: #f8f1df;
+    color: #111827;
+    text-align: center;
+}
+
+.hero-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 12px 22px;
+    margin-bottom: 25px;
+
+    border: 1px solid #dfc99b;
+    border-radius: 30px;
+
+    color: #72552a;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero-title {
+    font-size: clamp(35px, 5vw, 65px);
+    font-weight: 900;
+    line-height: 1.2;
+    color: #101827;
+    margin-bottom: 22px;
+}
+
+.highlight-text {
+    color: #963e25;
+}
+
+.hero-subtitle {
+    max-width: 800px;
+    margin: auto;
+
+    font-size: 17px;
+    line-height: 1.8;
+    color: #665b47;
+}
+
+/* COLLEGE IMAGE */
+
+.hero-image-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 45px auto 0;
+
+    overflow: hidden;
+    border-radius: 22px;
+    border: 5px solid #e6d7b8;
+}
+
+.college-gate-img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* THREE STEPS */
+
+.welcome-features {
+    padding: 55px 6%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.step-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    padding: 25px;
+    border-radius: 16px;
+
+    background: #17243d;
+    border: 1px solid #34435e;
+
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    border-color: #ffae54;
+}
+
+.step-number {
+    font-size: 30px;
+    font-weight: 900;
+    color: #ffad52;
+}
+
+.step-info h4 {
+    margin-bottom: 7px;
+    font-size: 17px;
+}
+
+.step-info p {
+    color: #bac5d5;
+    font-size: 13px;
+}
+
+/* ABOUT */
+
+.about {
+    padding: 70px 10%;
+    text-align: center;
+    background: #111d33;
+}
+
+.about h2 {
+    margin: 17px 0;
+    font-size: 34px;
+    color: #ffffff;
+}
+
+.about > p:last-child {
+    max-width: 850px;
+    margin: auto;
+    color: #c5cbd8;
+    line-height: 1.9;
+}
+
+/* COMMON SECTION */
+
+.cmp-sec {
+    padding: 75px 6%;
+    text-align: center;
+}
+
+.cmp-sec h2 {
+    font-size: 32px;
+    margin: 12px 0 35px;
+    color: #ffffff;
+}
+
+.cmp-eyebrow {
+    color: #ffb45c;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.cmp-alt {
+    background: #111d33;
+}
+
+/* CARDS */
+
+.cmp-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1250px;
+    margin: auto;
+}
+
+.cmp-card {
+    padding: 27px;
+    text-align: left;
+
+    background: #17243d;
+    border: 1px solid #34435e;
+    border-radius: 17px;
+
+    transition: 0.3s;
+}
+
+.cmp-card:hover {
+    transform: translateY(-5px);
+    border-color: #ffae54;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.cmp-ico {
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.cmp-card h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.cmp-card p {
+    color: #c1cbd9;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.cmp-meta {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin: 18px 0;
+    color: #ffbd72;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.cmp-card > a {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffb45c;
+}
+
+.cmp-center {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* HERITAGE */
+
+.cmp-about-box {
+    max-width: 1100px;
+    margin: auto;
+    padding: 45px;
+
+    text-align: left;
+    background: #17243d;
+    border: 1px solid #34435e;
+    border-radius: 20px;
+}
+
+.cmp-about-box h2 {
+    margin: 15px 0 22px;
+}
+
+.cmp-about-box > p:not(.cmp-eyebrow) {
+    color: #c5cbd8;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+.cmp-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.cmp-stats div {
+    padding: 20px 10px;
+    text-align: center;
+    background: #101b35;
+    border-radius: 12px;
+}
+
+.cmp-stats b {
+    display: block;
+    color: #ffb45c;
+    font-size: 27px;
+}
+
+.cmp-stats span {
+    display: block;
+    color: #c5cbd8;
+    font-size: 12px;
+    margin-top: 7px;
+}
+
+/* FOOTER */
+
+.cmp-footer {
+    padding: 55px 7% 25px;
+    background: #050c1b;
+    border-top: 2px solid #34435e;
+}
+
+.cmp-foot-top {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.college-logo {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    background: #fff4dc;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+.cmp-foot-top h3 {
+    color: #ffffff;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.cmp-orange {
+    color: #ffad52;
+}
+
+.cmp-footer > p {
+    margin: 15px 0;
+    line-height: 1.7;
+}
+
+.cmp-footer h4 {
+    margin: 30px 0 15px;
+    color: #ffffff;
+}
+
+.cmp-footer > a {
+    display: block;
+    width: fit-content;
+    margin: 12px 0;
+    color: #c5cbd8;
+}
+
+.cmp-footer > a:hover {
+    color: #ffb45c;
+    padding-left: 5px;
+}
+
+.cmp-footer hr {
+    margin: 25px 0;
+    border: none;
+    border-top: 1px solid #34435e;
+}
+
+.cmp-ct {
+    text-align: center;
+    color: #c5cbd8;
+}
+
+.cmp-inline {
+    display: inline !important;
+}
+
+.cmp-small {
+    font-size: 12px;
+}
+
+/* LIGHT MODE */
+
+body.light-mode .welcome-hero {
+    background: #fffaf0;
+}
+
+body.light-mode .about,
+body.light-mode .cmp-alt {
+    background: #e9edf5;
+}
+
+body.light-mode .about h2,
+body.light-mode .cmp-sec h2 {
+    color: #17243d;
+}
+
+body.light-mode .about > p:last-child {
+    color: #39465c;
+}
+
+body.light-mode .cmp-card,
+body.light-mode .step-card,
+body.light-mode .cmp-about-box {
+    background: #ffffff;
+    border-color: #d7deea;
+}
+
+body.light-mode .cmp-card h3,
+body.light-mode .step-info h4,
+body.light-mode .cmp-about-box h2 {
+    color: #17243d;
+}
+
+body.light-mode .cmp-card p,
+body.light-mode .step-info p,
+body.light-mode .cmp-about-box > p:not(.cmp-eyebrow) {
+    color: #536078;
+}
+
+body.light-mode .cmp-stats div {
+    background: #edf1f8;
+}
+
+body.light-mode .cmp-stats span {
+    color: #39465c;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .welcome-features {
+        grid-template-columns: 1fr;
+    }
+
+    .cmp-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cmp-center {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 10px 12px;
+        min-height: 72px;
+        gap: 7px;
+    }
+
+    .navbar-logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .logo {
+        gap: 8px;
+    }
+
+    .logo-text h2 {
+        font-size: 13px;
+    }
+
+    .logo-text p {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .top-actions {
+        gap: 5px;
+    }
+
+    .theme-button {
+        width: 34px;
+        min-height: 37px;
+        font-size: 18px;
+    }
+
+    .login-button,
+    .signup-button {
+        min-height: 37px;
+        padding: 0 9px;
+        font-size: 11px;
+    }
+
+    .menu-btn {
+        width: 38px;
+        height: 37px;
+        min-height: 37px;
+        font-size: 25px;
+    }
+
+    .options-menu {
+        max-width: 90%;
+    }
+
+    .menu-heading {
+        padding: 20px 16px;
+    }
+
+    .menu-heading h2 {
+        font-size: 15px;
+    }
+
+    .menu-items > a {
+        font-size: 16px;
+        padding: 14px 10px;
+    }
+
+    .menu-theme {
+        font-size: 13px;
+    }
+
+    .welcome-hero {
+        padding: 55px 18px 35px;
+    }
+
+    .hero-badge {
+        font-size: 10px;
+        padding: 10px 13px;
+        letter-spacing: 1px;
+    }
+
+    .hero-title {
+        font-size: 34px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    .hero-image-wrapper {
+        margin-top: 30px;
+        border-radius: 14px;
+    }
+
+    .college-gate-img {
+        height: 250px;
+    }
+
+    .welcome-features {
+        padding: 35px 16px;
+        gap: 14px;
+    }
+
+    .step-card {
+        padding: 20px 15px;
+    }
+
+    .about {
+        padding: 50px 20px;
+    }
+
+    .about h2 {
+        font-size: 25px;
+    }
+
+    .cmp-sec {
+        padding: 50px 16px;
+    }
+
+    .cmp-sec h2 {
+        font-size: 25px;
+    }
+
+    .cmp-cards,
+    .cmp-center {
+        grid-template-columns: 1fr;
+    }
+
+    .cmp-card {
+        padding: 22px;
+    }
+
+    .cmp-about-box {
+        padding: 25px 18px;
+    }
+
+    .cmp-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cmp-foot-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .college-logo {
+        width: 110px;
+        height: 110px;
+    }
+
+    .cmp-foot-top h3 {
+        font-size: 19px;
+    }
+
+    .cmp-footer {
+        padding: 40px 20px 20px;
+    }
+}
+
+/* VERY SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+    .logo-text h2 {
+        font-size: 11px;
+    }
+
+    .logo-text p {
+        font-size: 7px;
+    }
+
+    .navbar-logo {
+        width: 39px;
+        height: 39px;
+    }
+
+    .login-button {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 29px;
+    }
+    /* =================================
+   GLOBAL CMP DARK THEME FIX
+================================= */
+
+}
+/* =================================
+   LANDING PAGE BACKGROUND FIX
+================================= */
+
+/* =================================
+   CMP SKIN + RED THEME
+================================= */
+
+/* Main page background */
+body {
+    background: #fffaf0 !important;
+    color: #29221c;
+}
+
+/* Hero section */
+.welcome-hero {
+    background: #fffaf0 !important;
+    color: #29221c !important;
+}
+
+.hero-title {
+    color: #29221c !important;
+}
+
+.highlight-text {
+    color: #963c25 !important;
+}
+
+.hero-subtitle {
+    color: #75685b !important;
+}
+
+.hero-badge {
+    background: #f7ead6;
+    color: #963c25;
+    border: 1px solid #e5cbb0;
+}
+
+/* College image border */
+.hero-image-wrapper {
+    background: #fffaf0;
+    border-color: #eadfc9;
+}
+
+/* Features */
+.welcome-features {
+    background: #fffaf0;
+}
+
+.step-card {
+    background: #963c25;
+    border-color: #b85a3d;
+}
+
+.step-number {
+    color: #ffe0ad;
+}
+
+/* About section */
+.about,
+.cmp-alt {
+    background: #f5ead8 !important;
+}
+
+.about h2,
+.cmp-sec h2 {
+    color: #29221c !important;
+}
+
+.about > p:last-child {
+    color: #75685b;
+}
+
+/* Other sections */
+.cmp-sec {
+    background: #fffaf0;
+}
+
+.cmp-eyebrow {
+    color: #963c25;
+}
+
+/* Cards */
+.cmp-card,
+.cmp-about-box {
+    background: #ffffff;
+    border: 1px solid #eadfc9;
+}
+
+.cmp-card h3,
+.cmp-about-box h2 {
+    color: #29221c;
+}
+
+.cmp-card p,
+.cmp-about-box > p:not(.cmp-eyebrow) {
+    color: #75685b;
+}
+
+.cmp-meta,
+.cmp-card > a {
+    color: #963c25;
+}
+
+/* Statistics */
+.cmp-stats div {
+    background: #f5ead8;
+}
+
+.cmp-stats b {
+    color: #963c25;
+}
+
+.cmp-stats span {
+    color: #75685b;
+}
+
+/* Red buttons and links */
+.login-button {
+    background: #963c25;
+    color: #ffffff;
+    border-color: #963c25;
+}
+
+.signup-button {
+    background: #963c25;
+    color: #ffffff;
+}
+
+/* Footer */
+.cmp-footer {
+    background: #963c25;
+    border-top: 2px solid #742c1b;
+}
+
+.cmp-footer h3,
+.cmp-footer h4 {
+    color: #ffffff;
+}
+
+.cmp-footer > p,
+.cmp-footer > a,
+.cmp-ct {
+    color: #fcebdc;
+}
+
+.cmp-orange {
+    color: #ffe0ad;
+}
+
+/* Keep navbar dark */
+.navbar {
+    background: #050c1b;
+}
+
+/* Keep side menu dark */
+.options-menu {
+    background: #17243d;
+}
+
+/* Mobile horizontal overflow fix */
+html,
+body {
+    overflow-x: hidden;
+}
+

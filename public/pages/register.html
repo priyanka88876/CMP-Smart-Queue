@@ -1,0 +1,235 @@
+,
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration | CMP Smart Queue</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+
+            <img
+    src="../assets/cmp-logo.png"
+    alt="CMP Degree College Logo"
+    class="navbar-logo"
+>
+
+            <div>
+                <h2>CMP Degree College</h2>
+                <p>SMART QUEUE MANAGEMENT</p>
+            </div>
+
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="index.html" class="nav-link">Home</a>
+
+            <a href="index.html#about" class="nav-link">About</a>
+
+            <a href="login.html" class="nav-link login-box">Login</a>
+
+            <a href="register.html" class="nav-link register-box active">
+                Register
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- REGISTRATION SECTION -->
+    <main class="register-page">
+
+        <section class="register-card">
+
+            <div class="register-heading">
+
+                <div class="register-icon">CMP</div>
+
+                <p class="section-label">STUDENT PORTAL</p>
+
+                <h1>Create Your Account</h1>
+
+                <p class="subtitle">
+                    Register once to book appointments and generate queue tokens.
+                </p>
+
+            </div>
+
+
+            <!-- REGISTRATION FORM -->
+            <form id="registerForm" class="register-form">
+
+                <div class="form-group">
+
+                    <label for="name">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="enrollmentNo">Enrollment Number</label>
+
+                    <input
+                        type="text"
+                        id="enrollmentNo"
+                        placeholder="Enter enrollment number"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="class">Class / Programme</label>
+
+                    <select id="class" required>
+
+                        <option value="" disabled selected>
+                            Select Class
+                        </option>
+
+                        <option value="BA">BA</option>
+                        <option value="BSc">BSc</option>
+                        <option value="BCom">BCom</option>
+                        <option value="BCA">BCA</option>
+                        <option value="BCA Data Science">BCA (Data Science)</option>
+                        <option value="MA">MA</option>
+                        <option value="MSc">MSc</option>
+                        <option value="MCom">MCom</option>
+                        <option value="MCA">MCA</option>
+                        <option value="Data Science">Data Science</option>
+                        <option value="LLB">LLB</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="semester">Year / Semester</label>
+
+                    <select id="semester" required>
+
+                        <option value="" disabled selected>
+                            First select your class
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="course">Course / Subject</label>
+
+                    <input
+                        type="text"
+                        id="course"
+                        placeholder="Example: History, Physics"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Minimum 6 characters"
+                        minlength="6"
+                        autocomplete="new-password"
+                        required
+                    >
+
+                </div>
+
+
+                <button type="submit" id="registerButton" class="register-submit">
+                    Create Student Account
+                </button>
+
+
+                <p
+                    id="registerMessage"
+                    class="form-message"
+                    role="status"
+                    aria-live="polite">
+                </p>
+
+            </form>
+
+
+            <p class="existing-account">
+                Already have an account?
+                <a href="login.html">Login here</a>
+            </p>
+
+
+            <a href="index.html" class="back-home">
+                ← Back to Home
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 CMP Degree College Smart Queue Management System
+        </p>
+
+    </footer>
+
+
+    <!-- FIREBASE REGISTRATION JAVASCRIPT -->
+    <script type="module" src="../js/register.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,286 @@
+/* ===== FORGOT PASSWORD PAGE ===== */
+
+.forgot-container,
+.forgot-container * {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(ellipse at top, #172743 0%, #080d1b 65%);
+    color: #ffffff;
+}
+
+/* Main container */
+
+.forgot-container {
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+}
+
+/* Card */
+
+.forgot-card {
+    width: 100%;
+    padding: 38px 34px;
+    background: #101b31;
+    border: 1px solid #2a3c5c;
+    border-radius: 18px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+    text-align: center;
+}
+
+/* CMP logo */
+
+.forgot-logo {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 193, 107, 0.45);
+    border-radius: 16px;
+    background: linear-gradient(135deg, #ffe6b5, #f5bd63);
+    color: #10213e;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    box-shadow: 0 8px 22px rgba(245, 189, 99, 0.15);
+}
+
+/* Heading */
+
+.forgot-card h1 {
+    margin: 0 0 12px;
+    color: #ffffff;
+    font-size: 27px;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+/* Description */
+
+.forgot-card .description {
+    margin: 0 0 28px;
+    color: #aebbd0;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Form */
+
+#forgotPasswordForm {
+    width: 100%;
+    text-align: left;
+}
+
+#forgotPasswordForm label {
+    display: block;
+    margin-bottom: 9px;
+    color: #e4ebf7;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#forgotPasswordForm input {
+    display: block;
+    width: 100%;
+    height: 49px;
+    margin: 0 0 20px;
+    padding: 0 15px;
+    border: 1px solid #354765;
+    border-radius: 9px;
+    outline: none;
+    background: #080d1b;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#forgotPasswordForm input::placeholder {
+    color: #8492aa;
+}
+
+#forgotPasswordForm input:focus {
+    border-color: #ffc16b;
+    box-shadow: 0 0 0 3px rgba(255, 193, 107, 0.12);
+}
+
+/* Reset button */
+
+#resetButton {
+    display: block;
+    width: 100%;
+    min-height: 49px;
+    padding: 13px 16px;
+    border: none;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #ffe0a0, #f5bd63);
+    color: #10213e;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#resetButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(245, 189, 99, 0.18);
+}
+
+#resetButton:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Message */
+
+#resetMessage {
+    margin: 15px 0 0;
+    color: #aebbd0;
+    font-size: 13px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+/* Back link */
+
+.back-link {
+    display: inline-block;
+    margin-top: 24px;
+    color: #ffc16b;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #ffe0a0;
+    text-decoration: underline;
+}
+
+/* Mobile responsive */
+
+@media (max-width: 480px) {
+    body {
+        padding: 16px;
+    }
+
+    .forgot-card {
+        padding: 30px 22px;
+        border-radius: 15px;
+    }
+
+    .forgot-card h1 {
+        font-size: 24px;
+    }
+
+    .forgot-logo {
+        width: 62px;
+        height: 62px;
+        font-size: 20px;
+    }
+    /* ===== FIX: ORGANIZED VERTICAL LAYOUT ===== */
+
+.forgot-container {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+.forgot-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    padding: 35px;
+    text-align: left;
+}
+
+.forgot-logo {
+    align-self: center;
+    margin: 0 auto 22px;
+}
+
+.forgot-card h1 {
+    width: 100%;
+    margin: 0 0 12px;
+    text-align: center;
+}
+
+.forgot-card .description {
+    width: 100%;
+    margin: 0 0 26px;
+    text-align: center;
+}
+
+#forgotPasswordForm {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0;
+}
+
+#forgotPasswordForm label {
+    width: 100%;
+    margin: 0 0 8px;
+    text-align: left;
+}
+
+#forgotPasswordForm input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    margin: 0 0 20px;
+}
+
+#resetButton {
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+
+#resetMessage {
+    width: 100%;
+    text-align: center;
+}
+
+.back-link {
+    align-self: center;
+    margin-top: 20px;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .forgot-card {
+        padding: 26px 20px;
+    }
+}
+}
+.forgot-logo {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 20px;
+}
+
+.forgot-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}

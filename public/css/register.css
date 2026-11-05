@@ -1,0 +1,237 @@
+/* ================================
+   CMP SMART QUEUE - REGISTER PAGE
+================================ */
+
+/* Main Registration Card */
+.register-card {
+    width: 100%;
+    max-width: 600px;
+    padding: 38px;
+    margin: 35px auto;
+
+    background: #fffaf0;
+    border: 1px solid #eadfc9;
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(65, 43, 25, 0.12);
+}
+
+/* CMP Registration Heading */
+.register-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.register-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #8f321f;
+    color: #fffaf0;
+
+    border-radius: 15px;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.register-heading .section-label {
+    color: #a34a2e;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 9px;
+}
+
+.register-card h1 {
+    text-align: center;
+    color: #211b16;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.register-card .subtitle {
+    text-align: center;
+    color: #75685b;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Registration Form */
+.register-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.register-form .form-group {
+    width: 100%;
+}
+
+.register-form label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #71351f;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.register-form input,
+.register-form select {
+    display: block;
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 14px;
+
+    border-radius: 9px;
+    border: 1px solid #dfcfb5;
+    outline: none;
+
+    background: #ffffff;
+    color: #29221c;
+    font-size: 14px;
+    font-family: inherit;
+
+    transition: 0.2s ease;
+}
+
+.register-form input::placeholder {
+    color: #a39788;
+}
+
+.register-form select {
+    cursor: pointer;
+}
+
+.register-form input:focus,
+.register-form select:focus {
+    border-color: #a6472b;
+    box-shadow: 0 0 0 3px rgba(166, 71, 43, 0.12);
+}
+
+/* Register Button */
+.register-form .register-submit,
+.register-form button[type="submit"] {
+    width: 100%;
+    min-height: 48px;
+    margin-top: 10px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #963c25;
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.register-form .register-submit:hover,
+.register-form button[type="submit"]:hover {
+    background: #742c1b;
+    transform: translateY(-1px);
+}
+
+/* Status Message */
+.register-form .form-message {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Existing Account */
+.existing-account {
+    text-align: center;
+    color: #625448;
+    font-size: 14px;
+    margin-top: 22px;
+}
+
+.existing-account a,
+.back-home {
+    color: #963c25;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.existing-account a:hover,
+.back-home:hover {
+    text-decoration: underline;
+}
+
+.back-home {
+    display: block;
+    text-align: center;
+    margin-top: 18px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .register-card {
+        width: calc(100% - 28px);
+        padding: 25px 18px;
+        margin: 20px auto;
+    }
+
+    .register-card h1 {
+        font-size: 25px;
+    }
+
+    .register-form input,
+    .register-form select {
+        font-size: 14px;
+    }
+}
+/* REGISTER PAGE FULL CREAM BACKGROUND */
+
+html,
+body {
+    background: #FFF1DF !important;
+    background-image: none !important;
+    min-height: 100%;
+}
+
+/* Main page background */
+.register-page {
+    background: #FFF1DF !important;
+    background-image: none !important;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Registration card */
+.register-card {
+    background: #FFF1DF !important;
+    color: #252536 !important;
+}
+
+/* Form fields */
+.register-card input,
+.register-card select {
+    background: #FFFAF4 !important;
+    color: #252536 !important;
+    border: 1px solid #D9BFA5 !important;
+}
+
+/* Heading and labels */
+.register-card h1,
+.register-card label {
+    color: #252536 !important;
+}
+
+/* Orange-red button */
+.register-submit {
+    background: #B83A2B !important;
+    color: white !important;
+}

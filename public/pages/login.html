@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | CMP Smart Queue</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="../assets/cmp-logo.png"
+                 alt="CMP Degree College Logo"
+                 class="navbar-logo">
+
+            <div>
+                <h2>CMP Degree College</h2>
+                <p>SMART QUEUE MANAGEMENT</p>
+            </div>
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="index.html#about" class="nav-link">About</a>
+            <a href="login.html" class="nav-link login-box active">Login</a>
+            <a href="register.html" class="nav-link register-box">Register</a>
+        </nav>
+    </header>
+
+    <main class="login-page">
+
+        <section class="login-card">
+
+            <p class="section-label">WELCOME BACK</p>
+
+            <h1>Login to Your Account</h1>
+
+            <p class="subtitle">
+                Access your student dashboard and manage your queue.
+            </p>
+
+            <form id="loginForm">
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your registered email"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <div class="password-wrapper">
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            class="toggle-password"
+                            aria-label="Show password"
+                        >
+                            Show
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-options">
+
+                    <label class="remember-option">
+                        <input type="checkbox" id="rememberMe">
+                        Remember me
+                    </label>
+
+                    <a href="forgot-password.html">
+                        Forgot Password?
+                    </a>
+
+                </div>
+
+                <button type="submit" id="loginButton" class="login-submit">
+                    Login
+                </button>
+
+                <p id="loginMessage" class="form-message" role="status"></p>
+
+            </form>
+
+            <div class="divider">
+                <span>NEW TO CMP SMART QUEUE?</span>
+            </div>
+
+            <a href="register.html" class="create-account">
+                Create Student Account
+            </a>
+
+            <a href="index.html" class="back-home">
+                ← Back to Home
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 CMP Degree College Smart Queue Management System</p>
+    </footer>
+
+    <script type="module" src="../js/login.js"></script>
+
+</body>
+</html>

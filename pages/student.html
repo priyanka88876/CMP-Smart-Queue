@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal | CMP Smart Queue</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/student.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img
+                src="../assets/cmp-logo.png"
+                alt="CMP Degree College Logo"
+                class="navbar-logo"
+            >
+
+            <div class="logo-text">
+                <h2>CMP Degree College</h2>
+                <p>SMART QUEUE MANAGEMENT</p>
+            </div>
+        </a>
+
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+    </header>
+
+    <main class="student-container">
+
+        <section class="student-welcome">
+            <p class="section-label">STUDENT PORTAL</p>
+            <h2>Welcome, <span id="studentName"></span></h2>
+            <p id="studentInfo"></p>
+        </section>
+
+        <section class="token-card">
+            <h2>Book Your Appointment</h2>
+            <p>Select a college service and generate your digital token.</p>
+
+            <form id="tokenForm">
+
+                <select id="service" required>
+                    <option value="" disabled selected>Select Service</option>
+
+                    <optgroup label="College Services">
+                        <option value="legacy|Fee Receipt & Verification|Counter 1 & 2">
+                            Fee Receipt & Verification
+                        </option>
+
+                        <option value="legacy|Admissions & Enrollment|Counter 3 & 4">
+                            Admissions & Enrollment
+                        </option>
+
+                        <option value="legacy|TC & Migration Certificate|Counter 5">
+                            TC & Migration Certificate
+                        </option>
+
+                        <option value="legacy|Marksheet & Degree Verification|Counter 6">
+                            Marksheet & Degree Verification
+                        </option>
+
+                        <option value="legacy|Scholarship & Welfare Desk|Counter 7">
+                            Scholarship & Welfare Desk
+                        </option>
+
+                        <option value="legacy|ID Card & Library Access|Counter 8">
+                            ID Card & Library Access
+                        </option>
+                    </optgroup>
+
+                    <optgroup label="Scheduled Verification Services" id="scheduledServices">
+                    </optgroup>
+
+                </select>
+
+                <input id="date" type="date" required>
+
+                <select id="slot" required>
+                    <option value="" disabled selected>Select Time Slot</option>
+                </select>
+
+                <button type="submit" class="primary-btn">
+                    Generate Token
+                </button>
+
+            </form>
+        </section>
+
+        <section class="my-tokens-card">
+            <h2>My Tokens</h2>
+            <div id="myTokens"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 CMP Degree College Smart Queue Management System</p>
+    </footer>
+
+    <script type="module" src="../js/student.js"></script>
+
+</body>
+</html>
